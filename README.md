@@ -23,7 +23,7 @@ The package can be installed by adding `semantic_release` to your list of depend
 ```elixir
 def deps do
   [
-    {:semantic_release, "0.1.0", only: :dev, runtime: false}
+    {:semantic_release, "1.0.0-alpha.1", only: :dev, runtime: false}
   ]
 end
 ```
