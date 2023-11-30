@@ -51,19 +51,8 @@ jobs:
           mix local.hex --force
           mix do deps.get, deps.compile
 
-      - name: Use Node.js LTS
-        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
-        with:
-          node-version-file: ".tool-versions"
-
-      - name: Install packages
-        run: npm ci
-
-      - name: Audit npm signatures
-        run: npm audit signatures
-
       - name: Run Semantic Release
-        run: npx semantic-release
+        run: mix semantic_release
         env:
           GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
           HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
