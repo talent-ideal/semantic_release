@@ -1,18 +1,13 @@
 defmodule SemanticRelease do
-  @moduledoc """
-  Documentation for `SemanticRelease`.
-  """
+  @moduledoc false
 
-  @doc """
-  Hello world.
+  @spec install_path() :: String.t()
+  def install_path() do
+    Path.join([Mix.Project.build_path(), "semantic_release"])
+  end
 
-  ## Examples
-
-      iex> SemanticRelease.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  @spec bin_path() :: String.t()
+  def bin_path() do
+    Path.join([install_path(), "node_modules", ".bin", "semantic-release"])
   end
 end

@@ -8,6 +8,10 @@ Mix tasks for installing and running [`semantic-release`](https://github.com/sem
 > at any time, the public API _should not_ be considered stable,
 > and using a pinned version is _recommended_.
 
+> **Disclaimer**: Because `semantic-release` is written in JavaScript, this package will install Node.js in your `_build/` folder upon running.
+>
+> See the [`nodelix` documentation](https://hexdocs.pm/nodelix/) for more information on how Node.js is installed.
+
 Full documentation can be found at [https://hexdocs.pm/semantic_release](https://hexdocs.pm/semantic_release).
 
 ## Installation
