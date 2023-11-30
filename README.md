@@ -28,6 +28,29 @@ def deps do
 end
 ```
 
+## Configuration
+
+You can list additional npm packages to be passed to the `npm install` command:
+
+```elixir
+config :semantic_release,
+  additional_packages: [
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+  ]
+```
+
+This can also be used to override automatically installed package versions:
+
+```elixir
+config :semantic_release,
+  additional_packages: [
+    "semantic-release-hex@next",
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+  ]
+```
+
 ## Versioning
 
 This project follows the principles of [Semantic Versioning (SemVer)](https://semver.org/).

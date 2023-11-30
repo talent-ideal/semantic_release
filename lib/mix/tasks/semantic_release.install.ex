@@ -23,18 +23,18 @@ defmodule Mix.Tasks.SemanticRelease.Install do
   def run(_) do
     Logger.debug("Installing dependencies ...")
 
-    Mix.Task.run("nodelix.npm", [
-      "install",
-      "--silent",
-      "--prefix",
-      SemanticRelease.install_path(),
-      "--no-save",
-      "semantic-release",
-      "@semantic-release/changelog",
-      "@semantic-release/git",
-      "@semantic-release/exec",
-      "semantic-release-hex@next"
-    ])
+    Mix.Task.run(
+      "nodelix.npm",
+      [
+        "install",
+        "--silent",
+        "--prefix",
+        SemanticRelease.install_path(),
+        "--no-save",
+        "semantic-release",
+        "semantic-release-hex"
+      ] ++ Application.get_env(:semantic_release, :additional_packages, [])
+    )
 
     Logger.debug("Auditing signatures ...")
 

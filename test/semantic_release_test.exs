@@ -3,8 +3,6 @@ defmodule SemanticReleaseTest do
   doctest SemanticRelease
 
   setup_all do
-    IO.puts(SemanticRelease.install_path())
-
     File.rm_rf!(SemanticRelease.install_path())
 
     {branch, code} = System.cmd("git", ["branch", "--show-current"])
