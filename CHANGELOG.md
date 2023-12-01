@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0-alpha.2](https://github.com/talent-ideal/semantic_release/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-12-01)
+
+
+### 🐛 Bug Fixes
+
+* set nodelix as a production dependency ([49bcd09](https://github.com/talent-ideal/semantic_release/commit/49bcd095bdeb7cff93a0d3f3090eb2bb79f50231))
+
+
+### 🛠 Builds
+
+* **deps:** update dependency nodelix to v1.0.0-alpha.9 ([5062102](https://github.com/talent-ideal/semantic_release/commit/5062102d8c5e22a3aef115bec86c09960a26636a))
+
 ## 1.0.0-alpha.1 (2023-11-30)
 
 
