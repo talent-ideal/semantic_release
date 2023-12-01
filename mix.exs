@@ -25,7 +25,7 @@ defmodule SemanticRelease.MixProject do
 
   defp deps do
     [
-      {:nodelix, "1.0.0-alpha.8", runtime: false},
+      {:nodelix, "1.0.0-alpha.9", runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
