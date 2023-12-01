@@ -31,8 +31,7 @@ defmodule Mix.Tasks.SemanticRelease do
   def run(args) do
     Logger.debug("Running Semantic Release ...")
 
-    Mix.Task.run(
-      "nodelix",
+    Mix.Tasks.Nodelix.run(
       [
         SemanticRelease.bin_path()
       ] ++ args

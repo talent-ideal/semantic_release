@@ -25,7 +25,7 @@ defmodule SemanticRelease.MixProject do
 
   defp deps do
     [
-      {:nodelix, "1.0.0-alpha.8", only: [:dev, :test], runtime: false},
+      {:nodelix, "1.0.0-alpha.8", runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
@@ -33,7 +33,7 @@ defmodule SemanticRelease.MixProject do
 
   defp dialyzer() do
     [
-      plt_add_apps: [:mix],
+      plt_add_apps: [:mix, :nodelix],
       plt_local_path: "priv/plts/project.plt",
       plt_core_path: "priv/plts/core.plt"
     ]

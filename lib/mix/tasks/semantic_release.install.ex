@@ -23,8 +23,7 @@ defmodule Mix.Tasks.SemanticRelease.Install do
   def run(_) do
     Logger.debug("Installing dependencies ...")
 
-    Mix.Task.run(
-      "nodelix.npm",
+    Mix.Tasks.Nodelix.Npm.run(
       [
         "install",
         "--silent",
@@ -38,7 +37,7 @@ defmodule Mix.Tasks.SemanticRelease.Install do
 
     Logger.debug("Auditing signatures ...")
 
-    Mix.Task.run("nodelix.npm", [
+    Mix.Tasks.Nodelix.Npm.run([
       "audit",
       "signatures",
       "--silent",
