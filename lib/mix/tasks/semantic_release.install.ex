@@ -21,6 +21,14 @@ defmodule Mix.Tasks.SemanticRelease.Install do
 
   @impl Mix.Task
   def run(_) do
+    node_version = Nodelix.VersionManager.latest_lts_version()
+
+    # force installation on CI because using the cached version fails
+    if not Nodelix.VersionManager.is_installed?(node_version) or
+         System.get_env("CI") == "true" do
+      Nodelix.VersionManager.install(node_version)
+    end
+
     Logger.debug("Installing dependencies ...")
 
     Mix.Tasks.Nodelix.Npm.run(

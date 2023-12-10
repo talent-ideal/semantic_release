@@ -21,7 +21,7 @@ defmodule Mix.Tasks.SemanticRelease do
   """
 
   @shortdoc "Runs Semantic Release"
-  @requirements ["nodelix.install", "semantic_release.install"]
+  @requirements ["semantic_release.install"]
 
   use Mix.Task
   require Logger
