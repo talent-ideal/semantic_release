@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-alpha.3](https://github.com/talent-ideal/semantic_release/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2023-12-10)
+
+
+### 🐛 Bug Fixes
+
+* force node.js installation on CI ([6fc201d](https://github.com/talent-ideal/semantic_release/commit/6fc201d0587b833111b59ffffbd5f952d368c845))
+
 ## [1.0.0-alpha.2](https://github.com/talent-ideal/semantic_release/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-12-01)
 
 
